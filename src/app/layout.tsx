@@ -11,6 +11,7 @@ const url = 'https://buysake.me';
 export const metadata: Metadata = {
   title: siteName,
   description,
+  metadataBase: new URL(url),
   openGraph: {
     title: siteName,
     description,
