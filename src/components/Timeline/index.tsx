@@ -1,3 +1,5 @@
+'use client';
+
 import { FileText } from 'react-feather';
 import { GroupedTimeline } from '@/lib/timeline';
 import {

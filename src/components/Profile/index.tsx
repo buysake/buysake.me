@@ -1,3 +1,5 @@
+'use client';
+
 import { GitHub, Twitter } from 'react-feather';
 
 import { Image } from '@/components/Image';

@@ -1,3 +1,5 @@
+'use client';
+
 import { Profile } from '@/components/Profile';
 import { contentStyle, sectionWrapperStyle } from './index.css';
 import { TimelineItem, groupingTimeline } from '@/lib/timeline';
