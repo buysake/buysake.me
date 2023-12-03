@@ -9,7 +9,10 @@ const description = '🐸';
 const url = 'https://buysake.me';
 
 export const metadata: Metadata = {
-  title: siteName,
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
   description,
   metadataBase: new URL(url),
   openGraph: {
