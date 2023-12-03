@@ -28,3 +28,9 @@ export type Article = {
   tags?: string[];
   body: string;
 };
+
+export type RssFeed = {
+  pubDate: string;
+  title: string;
+  link: string;
+};

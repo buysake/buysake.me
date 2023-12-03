@@ -1,5 +1,5 @@
 import { XMLParser } from 'fast-xml-parser';
-import { TimelineItem } from '../types';
+import { RssFeed, TimelineItem } from '../types';
 import { getArticleList } from './article';
 
 const NOTE_RSS = 'https://note.com/buy_sake/rss';
@@ -24,7 +24,7 @@ const fetchTimeline = async (
       return parser.parse(xml);
     })
     .then((xml) => {
-      return xml.rss.channel.item.map((v: any) => ({
+      return xml.rss.channel.item.map((v: RssFeed) => ({
         type,
         date: new Date(v.pubDate),
         link: {
