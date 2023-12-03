@@ -1,7 +1,7 @@
 'use client';
 
 import { format } from 'date-fns';
-import { TimelineItem } from '@/lib/timeline';
+import { TimelineItem } from '@/lib/types';
 import {
   contentStyle,
   hostStyle,
@@ -18,20 +18,24 @@ type Props = {
 };
 
 export const TimelineCard = ({ item }: Props) => {
-  const [iconSrc, hostSite] = useMemo(() => {
+  const [iconSrc, hostSite, target] = useMemo(() => {
     if (item.type === 'zenn') {
-      return ['images/zenn.png', 'Zenn'];
+      return ['images/zenn.png', 'Zenn', '_blank'];
     }
 
     if (item.type === 'note') {
-      return ['images/note.png', 'note'];
+      return ['images/note.png', 'note', '_blank'];
     }
 
-    return ['', ''];
+    if (item.type === 'self') {
+      return ['images/buysakeme.png', 'buysake.me', undefined];
+    }
+
+    return ['', '', undefined];
   }, [item.type]);
 
   return (
-    <a className={contentStyle} target={'_blank'} href={item.link.href}>
+    <a className={contentStyle} target={target} href={item.link.href}>
       <h4 className={titleStyle}>{item.link.title}</h4>
       <div className={metaStyle}>
         <div className={hostStyle}>

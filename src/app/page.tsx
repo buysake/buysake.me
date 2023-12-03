@@ -1,4 +1,4 @@
-import { fetchTimelines } from '@/lib/timeline';
+import { fetchTimelines } from '@/lib/server/timeline';
 import { HomePage } from '@/page-components/Home';
 
 export default async function Home() {

@@ -13,12 +13,14 @@
     "@vanilla-extract/css": "^1.14.0",
     "date-fns": "^2.30.0",
     "fast-xml-parser": "^4.3.2",
+    "marked": "^11.0.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-feather": "^2.0.10"
   },
   "devDependencies": {
+    "@types/marked": "^6.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

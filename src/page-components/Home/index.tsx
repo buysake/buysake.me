@@ -2,7 +2,8 @@
 
 import { Profile } from '@/components/Profile';
 import { contentStyle, sectionWrapperStyle } from './index.css';
-import { TimelineItem, groupingTimeline } from '@/lib/timeline';
+import { groupingTimeline } from '@/lib/client/timeline';
+import { TimelineItem } from '@/lib/types';
 import { Timeline } from '@/components/Timeline';
 
 type Props = {
