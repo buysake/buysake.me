@@ -10,7 +10,7 @@ export const generateMetadata = async ({ params }: Props) => {
 
   const url = `https://buysake.me/article/${params.slug}`;
 
-  const title = article.title;
+  const siteName = 'buysake.me';
 
   return {
     title: article.title,
@@ -19,9 +19,12 @@ export const generateMetadata = async ({ params }: Props) => {
       url,
       description: null,
       images: ['/opengraph-image.png'],
+      siteName,
+      locale: 'ja_JP',
+      type: 'website',
     },
     twitter: {
-      title,
+      card: 'summary',
       url,
       description: null,
       images: ['/opengraph-image.png'],
