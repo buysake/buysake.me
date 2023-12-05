@@ -5,12 +5,16 @@ import { getArticleList } from './article';
 const NOTE_RSS = 'https://note.com/buy_sake/rss';
 const ZENN_RSS = 'https://zenn.dev/buy_sake/feed';
 
-export const fetchTimelines = async () => {
+const IGNORE_TAG = 'ポエム';
+
+export const fetchTimelines = async (ignoreTag = IGNORE_TAG) => {
   return Promise.all([
     fetchTimeline(NOTE_RSS, 'note'),
     fetchTimeline(ZENN_RSS, 'zenn'),
     getArticleList(),
-  ]).then(([note, zenn, self]) => [...note, ...zenn, ...self]);
+  ])
+    .then(([note, zenn, self]) => [...note, ...zenn, ...self])
+    .then((ts) => ts.filter((t) => !(t?.tags ?? []).includes(ignoreTag)));
 };
 
 const fetchTimeline = async (
