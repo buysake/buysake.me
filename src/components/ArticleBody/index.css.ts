@@ -51,3 +51,67 @@ globalStyle(`${bodyContentStyle} code`, {
   padding: '0.2em 0.4em',
   borderRadius: '0.25rem',
 });
+
+globalStyle(`${bodyContentStyle} .ogp`, {
+  display: 'flex',
+  textDecoration: 'none',
+  border: 'solid 1px #484848',
+  borderRadius: '0.3rem',
+  position: 'relative',
+  height: '10rem',
+  '@media': {
+    'screen and (max-width: 720px)': {
+      height: 'auto',
+    },
+  },
+});
+
+globalStyle(`${bodyContentStyle} .ogp .img`, {
+  display: 'flex',
+  height: '100%',
+  '@media': {
+    'screen and (max-width: 720px)': {
+      display: 'none',
+    },
+  },
+});
+
+globalStyle(`${bodyContentStyle} .ogp .img .empty`, {
+  aspectRatio: '1/1',
+  background: '#ccc',
+  display: 'flex',
+  borderRadius: '0.25rem 0 0 0.25rem',
+});
+
+globalStyle(`${bodyContentStyle} .ogp .img img`, {
+  height: '100%',
+  borderRadius: '0.25rem 0 0 0.25rem',
+});
+
+globalStyle(`${bodyContentStyle} .ogp .text`, {
+  padding: '1rem',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  flex: 1,
+  overflow: 'hidden',
+});
+
+globalStyle(`${bodyContentStyle} .ogp .text span`, {});
+
+globalStyle(`${bodyContentStyle} .ogp .text span.title`, {
+  fontSize: '0.9rem',
+  fontWeight: 'bold',
+  color: '#eee',
+  letterSpacing: '0.05rem',
+});
+
+globalStyle(`${bodyContentStyle} .ogp .text span:not(.title)`, {
+  fontSize: '0.8rem',
+  fontWeight: 'normal',
+  color: '#ccc',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+  textOverflow: 'ellipsis',
+  width: '100%',
+});
