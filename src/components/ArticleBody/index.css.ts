@@ -58,7 +58,7 @@ globalStyle(`${bodyContentStyle} .ogp`, {
   border: 'solid 1px #484848',
   borderRadius: '0.3rem',
   position: 'relative',
-  height: '10rem',
+  height: '8.5rem',
   '@media': {
     'screen and (max-width: 720px)': {
       height: 'auto',
@@ -100,7 +100,7 @@ globalStyle(`${bodyContentStyle} .ogp .text`, {
 globalStyle(`${bodyContentStyle} .ogp .text span`, {});
 
 globalStyle(`${bodyContentStyle} .ogp .text span.title`, {
-  fontSize: '0.9rem',
+  fontSize: '0.85rem',
   fontWeight: 'bold',
   color: '#eee',
   letterSpacing: '0.05rem',
