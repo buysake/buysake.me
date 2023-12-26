@@ -4,6 +4,7 @@ import { parseISO } from 'date-fns';
 import { marked } from 'marked';
 import ogs from 'open-graph-scraper';
 import { OgObject } from 'open-graph-scraper/dist/lib/types';
+import Encoding from 'encoding-japanese';
 
 const ARTICLE_DIR = `${process.cwd()}/articles`;
 
@@ -65,7 +66,7 @@ export const markdownToRawHtml = (json: string) => {
         },
         renderer: (token) => {
           if (token.ogp) {
-            return makeOGPHtml(token.ogp);
+            return makeOGPHtml(token.ogp, token.url);
           } else {
             return new marked.Renderer().link.call(
               this,
@@ -88,13 +89,14 @@ export const markdownToRawHtml = (json: string) => {
   return marked(json);
 };
 
-const makeOGPHtml = (ogp: OgObject) => {
+const makeOGPHtml = (ogp: OgObject, url: string) => {
   const { ogTitle, ogUrl, ogDescription, ogImage } = ogp;
+
   const imgHtml = ogImage
     ? `<img src="${ogImage[0].url}" />`
     : `<span class="empty"></span>`;
 
-  return `<a class="ogp" target="_blank" href="${ogUrl}">
+  return `<a class="ogp" target="_blank" href="${url}">
             <span class="img">
               ${imgHtml}
             </span>
@@ -107,14 +109,27 @@ const makeOGPHtml = (ogp: OgObject) => {
 };
 
 const fetchOGP = async (url: string) => {
-  const res = await ogs({
-    url: url,
-    fetchOptions: {
-      headers: {
-        'user-agent':
-          'Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)',
-      },
+  const response = await fetch(url, {
+    headers: {
+      'user-agent':
+        'Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)',
     },
+  }).catch(() => null);
+
+  if (!response) {
+    return null;
+  }
+
+  const uint8ArrayHtml = await response
+    .arrayBuffer()
+    .then((buffer) => new Uint8Array(buffer));
+
+  const convertedHtml = Encoding.codeToString(
+    Encoding.convert(uint8ArrayHtml, 'UNICODE')
+  );
+
+  const res = await ogs({
+    html: convertedHtml,
   });
 
   if (res.result) {

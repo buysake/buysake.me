@@ -616,6 +616,11 @@
   dependencies:
     tslib "^2.4.0"
 
+"@types/encoding-japanese@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@types/encoding-japanese/-/encoding-japanese-2.0.5.tgz#432644032b3a6d7408336f66931fdbda278a51a6"
+  integrity sha512-LjOB95Ri43cz+zZluJFFqtZGL/Pg80V/cM8ksIVuFV6INh5Ehc82iLbQyQ6heiSW8vmTzcg0hPKU+0+Em3yc1g==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -1254,6 +1259,11 @@ emojis-list@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
+
+encoding-japanese@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/encoding-japanese/-/encoding-japanese-2.0.0.tgz#fa0226e5469e7b5b69a04fea7d5481bd1fa56936"
+  integrity sha512-++P0RhebUC8MJAwJOsT93dT+5oc5oPImp1HubZpAuCZ5kTLnhuuBhKHj2jJeO/Gj93idPBWmIuQ9QWMe5rX3pQ==
 
 enhanced-resolve@^5.12.0:
   version "5.15.0"
