@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync } from 'fs';
 import { Article, ArticleMetadataJson, TimelineItem } from '../types';
 import { parseISO } from 'date-fns';
-import { marked } from 'marked';
+import { marked, Tokens } from 'marked';
 import ogs from 'open-graph-scraper';
 import { OgObject } from 'open-graph-scraper/dist/lib/types';
 import Encoding from 'encoding-japanese';
@@ -43,6 +43,12 @@ export const getArticle = async (slug: string): Promise<Article> => {
   };
 };
 
+type TokenSingleLink = Tokens.Generic & {
+  ogp?: OgObject;
+  appleMusic?: { originalUrl: string };
+  spotifyMusic?: { originalUrl: string };
+};
+
 export const markdownToRawHtml = (json: string) => {
   const tokenType = 'singlelink';
 
@@ -59,27 +65,33 @@ export const markdownToRawHtml = (json: string) => {
               type: tokenType,
               raw: cap[0],
               url: cap[0],
-              ogp: null,
-            };
+            } as TokenSingleLink;
           }
           return undefined;
         },
         renderer: (token) => {
+          if (token.appleMusic) {
+            return makeAppleMusicEmbed(token.appleMusic.originalUrl);
+          }
+          if (token.spotify) {
+            return makeSpotifyEmbed(token.spotify.originalUrl);
+          }
           if (token.ogp) {
             return makeOGPHtml(token.ogp, token.url);
-          } else {
-            return new marked.Renderer().link.call(
-              this,
-              token.url,
-              token.url,
-              token.url
-            );
           }
+          return new marked.Renderer().link.call(
+            this,
+            token.url,
+            token.url,
+            token.url
+          );
         },
       },
     ],
     walkTokens: async (token) => {
       if (token.type === tokenType) {
+        token.appleMusic = detectAppleMusic(token.url);
+        token.spotify = detectSpotify(token.url);
         token.ogp = await fetchOGP(token.url);
       }
     },
@@ -106,6 +118,27 @@ const makeOGPHtml = (ogp: OgObject, url: string) => {
               <span>${ogDescription}</span>
             </span>
           </a>`;
+};
+
+const makeAppleMusicEmbed = (url: string) => {
+  const src =
+    url.replace(/music\.apple\.com/, 'embed.music.apple.com') +
+    '&app=music&itsct=music_box_player&itscg=30200&ls=1&theme=light';
+
+  return `
+    <iframe id="embedPlayer" src="${src}" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" height="190" style="width: 100%; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s ease 0s 6 normal none running loading-indicator; background-color: rgb(228, 228, 228);"></iframe>
+  `;
+};
+
+const makeSpotifyEmbed = (url: string) => {
+  const src = url.replace(
+    /open\.spotify\.com\/track\//,
+    'open.spotify.com/embed/track/'
+  );
+
+  return `
+    <iframe style="border-radius:12px" src="${src}" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  `;
 };
 
 const fetchOGP = async (url: string) => {
@@ -137,4 +170,32 @@ const fetchOGP = async (url: string) => {
   }
 
   return null;
+};
+
+const detectAppleMusic = (url: string) => {
+  const data = new URL(url);
+  const matchPath = !!(data.host + data.pathname).match(
+    /music.apple.com\/[^\/].+\/album\/([^\/].+)/
+  );
+  const matchQuery = !!data.searchParams.get('i');
+
+  if (matchPath && matchQuery) {
+    return {
+      originalUrl: url,
+    };
+  }
+
+  return undefined;
+};
+
+const detectSpotify = (url: string) => {
+  const match = url.match(/open\.spotify\.com\/track\/[^\/].*\?/);
+
+  if (match) {
+    return {
+      originalUrl: url,
+    };
+  }
+
+  return undefined;
 };
