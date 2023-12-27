@@ -5,7 +5,7 @@ import { getArticleList } from './article';
 const NOTE_RSS = 'https://note.com/buy_sake/rss';
 const ZENN_RSS = 'https://zenn.dev/buy_sake/feed';
 
-const IGNORE_TAG = 'ポエム';
+const IGNORE_TAG = 'archive';
 
 export const fetchTimelines = async (ignoreTag = IGNORE_TAG) => {
   return Promise.all([
