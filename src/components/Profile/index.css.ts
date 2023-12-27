@@ -60,5 +60,5 @@ export const linkLabelIconStyle = style({
 });
 
 export const linkLabelTextStyle = style({
-  fontSize: '0.9rem',
+  fontSize: '0.85rem',
 });
