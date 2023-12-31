@@ -43,7 +43,11 @@ globalStyle(`${bodyContentStyle} ul li`, {
 });
 
 globalStyle(`${bodyContentStyle} ul li ul li`, {
-  paddingLeft: `$1rem`,
+  paddingLeft: `1rem`,
+});
+
+globalStyle(`${bodyContentStyle} img`, {
+  width: '100%',
 });
 
 globalStyle(`${bodyContentStyle} code`, {
