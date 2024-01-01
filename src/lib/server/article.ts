@@ -47,6 +47,7 @@ type TokenSingleLink = Tokens.Generic & {
   ogp?: OgObject;
   appleMusic?: { originalUrl: string };
   spotifyMusic?: { originalUrl: string };
+  tweet?: { originalUrl: string };
 };
 
 export const markdownToRawHtml = (json: string) => {
@@ -76,6 +77,9 @@ export const markdownToRawHtml = (json: string) => {
           if (token.spotify) {
             return makeSpotifyEmbed(token.spotify.originalUrl);
           }
+          if (token.tweet) {
+            return makeTweetEmbed(token.tweet.originalUrl);
+          }
           if (token.ogp) {
             return makeOGPHtml(token.ogp, token.url);
           }
@@ -92,6 +96,7 @@ export const markdownToRawHtml = (json: string) => {
       if (token.type === tokenType) {
         token.appleMusic = detectAppleMusic(token.url);
         token.spotify = detectSpotify(token.url);
+        token.tweet = detectTweet(token.url);
         token.ogp = await fetchOGP(token.url);
       }
     },
@@ -118,6 +123,12 @@ const makeOGPHtml = (ogp: OgObject, url: string) => {
               <span>${ogDescription}</span>
             </span>
           </a>`;
+};
+
+const makeTweetEmbed = (url: string) => {
+  return `
+    <blockquote data-theme="dark" class="twitter-tweet"><p lang="ja" dir="ltr"><a href="${url}"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  `;
 };
 
 const makeAppleMusicEmbed = (url: string) => {
@@ -170,6 +181,20 @@ const fetchOGP = async (url: string) => {
   }
 
   return null;
+};
+
+const detectTweet = (url: string) => {
+  const match = url.match(
+    /https:\/\/(twitter|x)\.com\/[A-Za-z0-9_]{1,}\/status\/[0-9]{18,}/
+  );
+
+  if (match) {
+    return {
+      originalUrl: url,
+    };
+  }
+
+  return undefined;
 };
 
 const detectAppleMusic = (url: string) => {
