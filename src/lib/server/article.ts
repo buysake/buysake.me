@@ -120,7 +120,7 @@ const makeOGPHtml = (ogp: OgObject, url: string) => {
             <span class="text">
               <span>${new URL(ogUrl ?? '').host}</span>
               <span class="title">${ogTitle}</span>
-              <span>${ogDescription}</span>
+              <span>${ogDescription ?? ''}</span>
             </span>
           </a>`;
 };
