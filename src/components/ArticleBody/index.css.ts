@@ -108,6 +108,11 @@ globalStyle(`${bodyContentStyle} .ogp .text span.title`, {
   fontWeight: 'bold',
   color: '#eee',
   letterSpacing: '0.05rem',
+  overflow: 'hidden',
+  display: '-webkit-box',
+  textOverflow: 'ellipsis',
+  WebkitLineClamp: 2,
+  WebkitBoxOrient: 'vertical',
 });
 
 globalStyle(`${bodyContentStyle} .ogp .text span:not(.title)`, {
