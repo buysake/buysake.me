@@ -1,8 +1,9 @@
 import { getArticle, getArticlePaths } from '@/lib/server/article';
 import { ArticlePage } from '@/page-components/Article';
+import { notFound } from 'next/navigation';
 
 export const generateStaticParams = () => {
-  return getArticlePaths().map((slug) => ({ slug }));
+  return getArticlePaths();
 };
 
 export const generateMetadata = async ({ params }: Props) => {
@@ -11,6 +12,10 @@ export const generateMetadata = async ({ params }: Props) => {
   const url = `https://buysake.me/article/${params.slug}`;
 
   const siteName = 'buysake.me';
+
+  if (!article) {
+    return null;
+  }
 
   return {
     title: article.title,
@@ -43,5 +48,7 @@ type Props = {
 
 export default async function Article({ params }: Props) {
   const article = await getArticle(params.slug);
+  if (!article) return notFound();
+
   return <ArticlePage article={article} />;
 }

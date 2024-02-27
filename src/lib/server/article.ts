@@ -5,16 +5,49 @@ import { marked, Tokens } from 'marked';
 import ogs from 'open-graph-scraper';
 import { OgObject } from 'open-graph-scraper/dist/lib/types';
 import Encoding from 'encoding-japanese';
+import { sep } from 'path';
 
 const ARTICLE_DIR = `${process.cwd()}/articles`;
+const METADATA_FILE = 'metadata.json';
+const CONTENT_FILE = 'content.md';
 
-export const getArticlePaths = (): string[] => {
-  return readdirSync(ARTICLE_DIR);
+export const getArticlePaths = () => {
+  return (
+    readdirSync(ARTICLE_DIR, {
+      recursive: true,
+      withFileTypes: true,
+    })
+      // METADATA_FILE or CONTENT_FILE 以外のファイルは除外
+      .filter(({ name }) => [METADATA_FILE, CONTENT_FILE].includes(name))
+      // ディレクトリでgroup by
+      .reduce(
+        (prev, dirent) => {
+          const dir = dirent.path;
+          const name = dirent.name;
+          const foundIndex = prev.findIndex((p) => p.dir === dir);
+          return foundIndex === -1
+            ? [...prev, { dir, files: [name] }]
+            : prev.map((p, i) =>
+                i === foundIndex ? { ...p, files: [...p.files, name] } : p
+              );
+        },
+        [] as { dir: string; files: string[] }[]
+      )
+      // METADATA_FILE & CONTENT_FILE どちらも存在するディレクトリに絞る
+      .filter(
+        ({ files }) =>
+          files.includes(METADATA_FILE) && files.includes(CONTENT_FILE)
+      )
+      .map(({ dir }) => {
+        const slug = dir.split(sep).findLast(() => true) ?? '';
+        return { dir, slug };
+      })
+  );
 };
 
 export const getArticleList = (): TimelineItem[] => {
-  return getArticlePaths().map((path) => {
-    const json = readFileSync(`${ARTICLE_DIR}/${path}/metadata.json`);
+  return getArticlePaths().map(({ dir, slug }) => {
+    const json = readFileSync(`${dir}/metadata.json`);
     const metadata = JSON.parse(json.toString()) as ArticleMetadataJson;
     return {
       type: 'self',
@@ -22,16 +55,20 @@ export const getArticleList = (): TimelineItem[] => {
       tags: metadata.tags,
 
       link: {
-        href: `/articles/${path}`,
+        href: `/articles/${slug}`,
         title: metadata.title,
       },
     };
   });
 };
 
-export const getArticle = async (slug: string): Promise<Article> => {
-  const markdown = readFileSync(`${ARTICLE_DIR}/${slug}/content.md`);
-  const json = readFileSync(`${ARTICLE_DIR}/${slug}/metadata.json`);
+export const getArticle = async (slug: string): Promise<Article | null> => {
+  const paths = getArticlePaths();
+  const path = paths.find((p) => p.slug === slug);
+  if (!path) return null;
+
+  const markdown = readFileSync(`${path.dir}/content.md`);
+  const json = readFileSync(`${path.dir}/metadata.json`);
   const metadata = JSON.parse(json.toString()) as ArticleMetadataJson;
   const html = await markdownToRawHtml(markdown.toString());
 
