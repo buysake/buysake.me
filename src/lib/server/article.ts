@@ -155,7 +155,7 @@ const makeOGPHtml = (ogp: OgObject, url: string) => {
               ${imgHtml}
             </span>
             <span class="text">
-              <span>${new URL(ogUrl ?? '').host}</span>
+              <span>${new URL(ogUrl ?? url).host}</span>
               <span class="title">${ogTitle}</span>
               <span>${ogDescription ?? ''}</span>
             </span>

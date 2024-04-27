@@ -7,7 +7,7 @@ globalStyle(`${bodyContentStyle} *`, {
 });
 
 globalStyle(`${bodyContentStyle} > *`, {
-  padding: '0.5rem 0',
+  padding: '0.75rem 0',
   lineHeight: '175%',
   letterSpacing: '0.05rem',
 });
