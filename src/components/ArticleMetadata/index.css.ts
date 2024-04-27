@@ -6,6 +6,7 @@ export const titleStyle = style({
   transform: 'skewX(-1deg)',
   fontWeight: 'bold',
   letterSpacing: '0.2rem',
+  lineHeight: '2.2rem',
 });
 
 export const kvsStyle = style({
