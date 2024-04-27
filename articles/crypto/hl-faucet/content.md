@@ -6,7 +6,9 @@
 
 Hyperliquidは何か新しい試みをする際に、まず先行してしれっとテストネットに出す傾向があるみたいなので、テストネットのUSDC 1万ドルくらいかき集めておくと将来遊ぶ時に便利そう。
 
-## まずはarbitrum sepoliaにgas代を集める
+HyperliquidのテストネットでUSDCの蛇口を、と書いているが厳密にはArbitrum SepoliaにHyperliquidが用意しているUSDC2の蛇口。
+
+## まずはArbitrum Sepoliaにgas代を集める
 
 SepoliaでETHを用意して、それをbridgeしてくるのが早そう。  
 0.1ETHもあれば2時間弱は稼働できる。
