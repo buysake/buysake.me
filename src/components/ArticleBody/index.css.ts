@@ -24,12 +24,12 @@ globalStyle(`${bodyContentStyle} p`, {
 
 globalStyle(`${bodyContentStyle} h1`, {
   padding: '1.5rem 0 0.5rem',
-  fontSize: '1.25rem',
+  fontSize: '1.3rem',
 });
 
 globalStyle(`${bodyContentStyle} h2`, {
   padding: '1.5rem 0 0.5rem',
-  fontSize: '1.15rem',
+  fontSize: '1.2rem',
 });
 
 globalStyle(`${bodyContentStyle} h3`, {
