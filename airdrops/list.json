@@ -96,7 +96,7 @@
     "project_url": "https://points.absinthe.network/hemi/start",
     "description": "モジュラーL2のHemiがポイントキャンペーン始めたけど穴場感がないので、POPマイニングだけ触りる。\n自分はインスタンスにCLI入れてやってるけど、どうやらブラウザ版もあるとの事。",
     "types": [
-      "tech", "free"
+      "tech", "free", "testnet"
     ],
     "links": {
       "original_url": "https://docs.hemi.xyz/how-to-tutorials/using-hemi/pop-mining/setup-part-1"
