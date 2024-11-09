@@ -34,3 +34,24 @@ export type RssFeed = {
   title: string;
   link: string;
 };
+
+export type AirdropItem = {
+  date: Date;
+  title: string;
+  project: string;
+  project_url: string;
+  description: string;
+  types: Array<'daily' | 'tech' | 'free' | 'only_gas' | 'game' | 'once'>;
+  links: {
+    pro_tweet_link?: string;
+    pro_referral_link?: {
+      url: string;
+      code: string;
+    };
+    my_referral_link?: {
+      url: string;
+      code: string;
+    };
+    original_url?: string;
+  };
+};

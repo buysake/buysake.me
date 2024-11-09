@@ -1,0 +1,23 @@
+[
+  {
+    "date": "2024-11-09T23:00:00+09:00",
+    "title": "Onchain Heroes 事前登録",
+    "project": "Onchain Heroes",
+    "project_url": "www.onchainheroes.xyz",
+    "description": "フルオンチェーンの放置ゲー on Abstract",
+    "types": [
+      "game", "once"
+    ],
+    "links": {
+      "pro_tweet_link": "https://x.com/lucianlampdefi/status/1844027795804135444",
+      "pro_referral_link": {
+        "url": "https://www.onchainheroes.xyz/signup?ref=lucianlampdefi",
+        "code": "lucianlampdefi"
+      },
+      "my_referral_link": {
+        "url": "https://onchainheroes.xyz/signup?ref=buy_sake",
+        "code": "buy_sake"
+      }
+    }
+  }
+]

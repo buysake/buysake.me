@@ -8,7 +8,7 @@ import {
   kvStyle,
   kvTextStyle,
   kvsStyle,
-  titleStyle,
+  pageTitleStyle,
 } from './index.css';
 
 type Props = Pick<Article, 'tags' | 'date' | 'title'>;
@@ -16,7 +16,7 @@ type Props = Pick<Article, 'tags' | 'date' | 'title'>;
 export const ArticleMetadata = ({ date, title, tags }: Props) => {
   return (
     <div>
-      <h1 className={titleStyle}>{title}</h1>
+      <h1 className={pageTitleStyle}>{title}</h1>
       <div className={kvsStyle}>
         <div className={kvStyle}>
           <div className={kvIconWrapperStyle}>

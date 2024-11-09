@@ -1,6 +1,8 @@
 import { size } from '@/styles/const';
 import { style } from '@vanilla-extract/css';
 
+export { backStyle, backIconStyle } from '@/styles/shared.css';
+
 export const contentStyle = style({
   margin: '0 auto',
   maxWidth: size.contentMaxWidth,
@@ -11,18 +13,6 @@ export const contentStyle = style({
       padding: size.contentPaddingSp,
     },
   },
-});
-
-export const backStyle = style({
-  color: '#eee',
-  textDecoration: 'none',
-  margin: '0.5rem 0 1rem',
-  display: 'inline-block',
-});
-
-export const backIconStyle = style({
-  width: '1.5rem',
-  height: '1.5rem',
 });
 
 export const metadataWrapperStyle = style({

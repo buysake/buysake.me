@@ -1,13 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-export const titleStyle = style({
-  fontSize: '1.4rem',
-  color: '#fff',
-  transform: 'skewX(-1deg)',
-  fontWeight: 'bold',
-  letterSpacing: '0.2rem',
-  lineHeight: '2.2rem',
-});
+export { pageTitleStyle } from '@/styles/shared.css';
 
 export const kvsStyle = style({
   display: 'flex',
