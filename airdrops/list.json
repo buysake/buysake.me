@@ -1,5 +1,22 @@
 [
   {
+    "date": "2024-11-10T03:00:00+09:00",
+    "title": "Yala テストネット",
+    "project": "Yala",
+    "project_url": "https://yala.org/",
+    "description": "BTC流動性レイヤーYalaのテストネット。\n触り方は公式docが分かりやすい。YUをmintする時に手持ちのBTC全部突っ込もうとすると失敗しがちなので1%くらい残してみよう。",
+    "types": [
+      "testnet"
+    ],
+    "links": {
+      "original_url": "https://docs.yala.org/user-guide/getting-started-with-yala",
+      "my_referral_link": {
+        "url": "https://app-testnet.yala.org?inviteCode=SRsDjePFsl",
+        "code": "SRsDjePFsl"
+      }
+    }
+  },
+  {
     "date": "2024-11-10T01:20:00+09:00",
     "title": "MilkyWay mPoint",
     "project": "MilkyWay",
