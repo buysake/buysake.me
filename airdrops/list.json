@@ -6,7 +6,7 @@
     "project_url": "https://yala.org/",
     "description": "BTC流動性レイヤーYalaのテストネット。\n触り方は公式docが分かりやすい。YUをmintする時に手持ちのBTC全部突っ込もうとすると失敗しがちなので1%くらい残してみよう。",
     "types": [
-      "testnet"
+      "testnet", "free"
     ],
     "links": {
       "original_url": "https://docs.yala.org/user-guide/getting-started-with-yala",
@@ -106,7 +106,7 @@
     "project_url": "https://hyperlend.finance/",
     "description": "Hyperliquid EVM上のレンディングサービスのテストネット開始",
     "types": [
-      "testnet"
+      "testnet", "free"
     ],
     "links": {
       "my_referral_link": {
@@ -122,7 +122,7 @@
     "project_url": "https://www.onchainheroes.xyz",
     "description": "フルオンチェーンの放置RPGゲー on Abstract。\n公式が「The onchain RPG for degens 」を名乗っていてギャンブルか？",
     "types": [
-      "game", "once"
+      "game", "once", "free"
     ],
     "links": {
       "pro_tweet_link": "https://x.com/lucianlampdefi/status/1844027795804135444",
