@@ -10,6 +10,7 @@ export const AIRDROP_TYPE_COLORS: {
   free: '#c9c940',
   once: '#c74081',
   testnet: '#add7f7',
+  favorite: '#fb0fc1',
 };
 
 export const AIRDROP_TYPE_NAMES: {
@@ -22,4 +23,5 @@ export const AIRDROP_TYPE_NAMES: {
   free: '原資不要',
   once: '単発タスク',
   testnet: 'テストネット',
+  favorite: 'お気に入り',
 };

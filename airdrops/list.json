@@ -1,5 +1,35 @@
 [
   {
+    "date": "2024-11-10T01:20:00+09:00",
+    "title": "MilkyWay mPoint",
+    "project": "MilkyWay",
+    "project_url": "https://app.milkyway.zone/",
+    "description": "MilkyWayは$TIAのリキッドステーキング。mPointという機能があるが果たして...",
+    "types": [
+      "favorite"
+    ],
+    "links": {
+      "original_url": "https://x.com/milky_way_zone/status/1757762281700835662",
+      "my_referral_link": {
+        "url": "https://app.milkyway.zone?ref=sake",
+        "code": "sake"
+      }
+    }
+  },
+  {
+    "date": "2024-11-10T01:20:00+09:00",
+    "title": "nillion verifier",
+    "project": "nillion",
+    "project_url": "https://nillion.com",
+    "description": "プライバシー系のプロジェクト。分散化されたストレージだけでなく、暗号化されたデータを復号化することなくそのデータに対しての計算を行える仕組みを提供するとの事。\nその一環の検証ノードの運用。ETHをstakeするとネットワークに対する影響力が増すが、0ETHでもどうやら動いていそう。",
+    "types": [
+      "tech", "free"
+    ],
+    "links": {
+      "original_url": "https://nillion.com/news/1007/"
+    }
+  },
+  {
     "date": "2024-11-09T23:45:00+09:00",
     "title": "Moonwalk",
     "project": "Moonwalk",
@@ -142,7 +172,7 @@
     "project_url": "https://www.getgrass.io/",
     "description": "端的に言うと「同一IPで激しく他人のHPスクレイピングしまくるとIPブロックされちゃうからお前のIPも貸して」というプロジェクト。Chrome拡張入れておけばあとは空き帯域幅を勝手に使ってくれる。",
     "types": [
-      "free", "once"
+      "free", "once", "favorite"
     ],
     "links": {
       "my_referral_link": {
@@ -150,5 +180,22 @@
         "code": "hIVFEr1yDldrkCI"
       }
     }
+  },
+  {
+    "date": "2024-11-01T00:00:00+09:00",
+    "title": "Hyperliquid",
+    "project": "Hyperliquid",
+    "project_url": "https://hyperliquid.xyz",
+    "description": "最高のDEX。ポイントキャンペーンが終わっても引き続き使います。",
+    "types": [
+      "favorite"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://app.hyperliquid.xyz/join/SAKE",
+        "code": "SAKE"
+      }
+    }
+
   }
 ]
