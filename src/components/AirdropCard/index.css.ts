@@ -70,12 +70,12 @@ export const tagDotStyle = recipe({
 });
 
 export const tagTextStyle = style({
-  fontSize: '0.7rem',
+  fontSize: '0.75rem',
   color: '#fff',
 });
 
 export const descriptionStyle = style({
-  fontSize: '0.8rem',
+  fontSize: '0.85rem',
   lineHeight: '1.2rem',
   color: '#fff',
   letterSpacing: '0.1rem',
@@ -105,7 +105,7 @@ export const linkIconStyle = style({
 });
 
 export const linkTextStyle = style({
-  fontSize: '0.7rem',
+  fontSize: '0.75rem',
   color: '#fff',
   padding: '0.25rem 0.5rem',
   display: 'flex',
