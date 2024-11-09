@@ -41,7 +41,9 @@ export type AirdropItem = {
   project: string;
   project_url: string;
   description: string;
-  types: Array<'daily' | 'tech' | 'free' | 'only_gas' | 'game' | 'once'>;
+  types: Array<
+    'daily' | 'tech' | 'free' | 'only_gas' | 'game' | 'once' | 'testnet'
+  >;
   links: {
     pro_tweet_link?: string;
     pro_referral_link?: {

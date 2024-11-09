@@ -1,10 +1,79 @@
 [
   {
+    "date": "2024-11-09T23:45:00+09:00",
+    "title": "Moonwalk",
+    "project": "Moonwalk",
+    "project_url": "https://moonwalk.fit/",
+    "description": "事前に任意のイベントにSOLをデポジットし、目標歩数に届かなければそれを剥奪され、届けば褒美が貰えるタイプのwalk to earn",
+    "types": [
+      "daily"
+    ],
+    "links": {
+      "pro_tweet_link": "https://x.com/tippy_crypto/status/1850190708084465820",
+      "pro_referral_link": {
+        "url": "https://app.moonwalk.fit/?referral=ck38y7by",
+        "code": "ck38y7by"
+      },
+      "my_referral_link": {
+        "url": "https://app.moonwalk.fit/?referral=t2jmxeq5",
+        "code": "t2jmxeq5"
+      }
+    }
+  },
+  {
+    "date": "2024-11-09T23:30:00+09:00",
+    "title": "Wizzwoods",
+    "project": "Wizzwoods",
+    "project_url": "https://www.wizzwoods.com/",
+    "description": "Telegram mini app としてリリースされた放置系の育成ゲーム。ドット絵が好み。こういうゲームはいくつあっていい。",
+    "types": [
+      "game", "daily", "free"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://t.me/WizzwoodsBot/app?startapp=rp_228754",
+        "code": "rp_228754"
+      }
+    }
+  },
+  {
+    "date": "2024-11-09T23:30:00+09:00",
+    "title": "Farm Frens",
+    "project": "Farm Frens",
+    "project_url": "https://t.me/FarmfrensBot",
+    "description": "Telegram mini app としてリリースされた放置系の農場育成ゲーム。Wizzwoodsと比べてファンシー(？)で動物たちから生命を感じる。恐らくTelegramゲーム系のプロジェクトだとクオリティはかなり上澄み。",
+    "types": [
+      "game", "daily", "free"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://t.me/FarmfrensBot?start=7415747226",
+        "code": "7415747226"
+      }
+    }
+  },
+  {
+    "date": "2024-11-09T23:30:00+09:00",
+    "title": "HyperLend テストネット",
+    "project": "HyperLend",
+    "project_url": "https://hyperlend.finance/",
+    "description": "Hyperliquid EVM上のレンディングサービスのテストネット開始",
+    "types": [
+      "testnet"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://testnet.hyperlend.finance/?ref=SAKE",
+        "code": "SAKE"
+      }
+    }
+  },
+  {
     "date": "2024-11-09T23:00:00+09:00",
     "title": "Onchain Heroes 事前登録",
     "project": "Onchain Heroes",
     "project_url": "https://www.onchainheroes.xyz",
-    "description": "フルオンチェーンの放置ゲー on Abstract",
+    "description": "フルオンチェーンの放置RPGゲー on Abstract。\n公式が「The onchain RPG for degens 」を名乗っていてギャンブルか？",
     "types": [
       "game", "once"
     ],
@@ -17,6 +86,68 @@
       "my_referral_link": {
         "url": "https://onchainheroes.xyz/signup?ref=buy_sake",
         "code": "buy_sake"
+      }
+    }
+  },
+  {
+    "date": "2024-11-09T23:00:00+09:00",
+    "title": "Hemi POP Mining",
+    "project": "Hemi",
+    "project_url": "https://points.absinthe.network/hemi/start",
+    "description": "モジュラーL2のHemiがポイントキャンペーン始めたけど穴場感がないので、POPマイニングだけ触りる。\n自分はインスタンスにCLI入れてやってるけど、どうやらブラウザ版もあるとの事。",
+    "types": [
+      "tech", "free"
+    ],
+    "links": {
+      "original_url": "https://docs.hemi.xyz/how-to-tutorials/using-hemi/pop-mining/setup-part-1"
+    }
+  },
+
+  {
+    "date": "2024-11-01T00:00:00+09:00",
+    "title": "Gradient",
+    "project": "Gradient",
+    "project_url": "https://gradient.network/",
+    "description": "「ぼくのかんがえたさいきょうのエッジコンピューティングネットワークを作るぞ。まずは\"Pervasive Connectivity\"を実現するためにみんなChrome拡張を入れてネットワークの一部になってくれ」との事。",
+    "types": [
+      "free", "once"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://app.gradient.network/signup?code=4TB8IH",
+        "code": "4TB8IH"
+      }
+    }
+  },
+  {
+    "date": "2024-11-01T00:00:00+09:00",
+    "title": "nodepay",
+    "project": "nodepay",
+    "project_url": "https://www.nodepay.ai/",
+    "description": "Grassと同様の空き域幅の間貸しサービス。Chrome拡張入れておけばあとは空き帯域幅を勝手に使ってくれる。",
+    "types": [
+      "free", "once"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://app.nodepay.ai/register?ref=XcrOqRkHvB1XXg4",
+        "code": "XcrOqRkHvB1XXg4"
+      }
+    }
+  },
+  {
+    "date": "2024-11-01T00:00:00+09:00",
+    "title": "Grass",
+    "project": "Grass",
+    "project_url": "https://www.getgrass.io/",
+    "description": "端的に言うと「同一IPで激しく他人のHPスクレイピングしまくるとIPブロックされちゃうからお前のIPも貸して」というプロジェクト。Chrome拡張入れておけばあとは空き帯域幅を勝手に使ってくれる。",
+    "types": [
+      "free", "once"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://app.getgrass.io/register?referralCode=hIVFEr1yDldrkCI",
+        "code": "hIVFEr1yDldrkCI"
       }
     }
   }

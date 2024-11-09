@@ -76,8 +76,10 @@ export const tagTextStyle = style({
 
 export const descriptionStyle = style({
   fontSize: '0.8rem',
+  lineHeight: '1.2rem',
   color: '#fff',
   letterSpacing: '0.1rem',
+  whiteSpace: 'pre-wrap',
 });
 
 export const linksWrapperStyle = style({
@@ -112,4 +114,17 @@ export const linkTextStyle = style({
   borderRadius: '0 4px 4px 0',
   background: '#222',
   letterSpacing: '0.1rem',
+});
+
+export const projectStyle = style({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0 0.25rem ',
+});
+
+export const projectLinkIconStyle = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: '#aaa',
 });

@@ -8,6 +8,8 @@ import {
   linkStyle,
   linkTextStyle,
   linksWrapperStyle,
+  projectLinkIconStyle,
+  projectStyle,
   rowHeadStyle,
   rowStyle,
   tagDotStyle,
@@ -29,7 +31,7 @@ export const AirdropCard = ({ item }: Props) => {
     return [
       item.links.original_url
         ? {
-            text: '一次情報',
+            text: '公式の補足情報',
             href: item.links.original_url,
           }
         : null,
@@ -47,7 +49,7 @@ export const AirdropCard = ({ item }: Props) => {
         : null,
       item.links.my_referral_link
         ? {
-            text: `私のリファ(${item.links.my_referral_link.code})`,
+            text: `${item.links.pro_referral_link ? '私の' : ''}リファ(${item.links.my_referral_link.code})`,
             href: item.links.my_referral_link.url,
           }
         : null,
@@ -72,14 +74,16 @@ export const AirdropCard = ({ item }: Props) => {
 
       <div className={rowStyle}>
         <p className={rowHeadStyle}>PROJECT</p>
-        <p className={descriptionStyle}>{item.project}</p>
-
-        <a className={linkStyle} target="_blank" href={item.project_url}>
-          <div className={linkIconStyle}>
-            <Link width={12} height={12} />
-          </div>
-          <p className={linkTextStyle}>公式サイト</p>
-        </a>
+        <div className={projectStyle}>
+          <p className={descriptionStyle}>{item.project}</p>
+          <a
+            className={projectLinkIconStyle}
+            target="_blank"
+            href={item.project_url}
+          >
+            <Link width={14} height={14} />
+          </a>
+        </div>
       </div>
 
       <div className={rowStyle}>

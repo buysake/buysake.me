@@ -8,5 +8,5 @@ export const getAirdropList = () => {
       ...v,
       date: parseISO(v.date),
     }))
-    .sort((v) => (v.date < v.date ? 1 : -1)) as AirdropItem[];
+    .sort((v) => (v.date < v.date ? -1 : 1)) as AirdropItem[];
 };

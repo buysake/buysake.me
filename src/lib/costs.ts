@@ -9,6 +9,7 @@ export const AIRDROP_TYPE_COLORS: {
   only_gas: '#9886e5',
   free: '#c9c940',
   once: '#c74081',
+  testnet: '#add7f7',
 };
 
 export const AIRDROP_TYPE_NAMES: {
@@ -20,4 +21,5 @@ export const AIRDROP_TYPE_NAMES: {
   only_gas: 'gas代のみ',
   free: '原資不要',
   once: '単発タスク',
+  testnet: 'テストネット',
 };
