@@ -141,7 +141,7 @@
     "title": "Hemi POP Mining",
     "project": "Hemi",
     "project_url": "https://points.absinthe.network/hemi/start",
-    "description": "モジュラーL2のHemiがポイントキャンペーン始めたけど穴場感がないので、POPマイニングだけ触りる。\n自分はインスタンスにCLI入れてやってるけど、どうやらブラウザ版もあるとの事。",
+    "description": "モジュラーL2のHemiがポイントキャンペーン始めたけど穴場感がないので、POPマイニングだけ触る。\n自分はインスタンスにCLI入れてやってるけど、どうやらブラウザ版もあるとの事。",
     "types": [
       "tech", "free", "testnet"
     ],
@@ -171,7 +171,7 @@
     "title": "nodepay",
     "project": "nodepay",
     "project_url": "https://www.nodepay.ai/",
-    "description": "Grassと同様の空き域幅の間貸しサービス。Chrome拡張入れておけばあとは空き帯域幅を勝手に使ってくれる。",
+    "description": "Grassと同様の空き域幅の間貸しサービス。Chrome拡張入れておけばあとは空き帯域幅を勝手に使ってくれる。\nエアドロほしいなら\"Proof of Humanhood\"のmedalは取っておこう。",
     "types": [
       "free", "once"
     ],
