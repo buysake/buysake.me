@@ -1,5 +1,35 @@
 [
   {
+    "date": "2024-11-12T22:00:00+09:00",
+    "title": "Wizzwoods for X",
+    "project": "Wizzwoods",
+    "project_url": "https://www.wizzwoods.com/",
+    "description": "Telegram mini appとして展開されているWizzwoodsがchrome拡張版としてもリリース。拡張入れてTwitter(X)をブラウザで開くとWizzwoodsも開く。\nどうやらTelegram版とはデータが分かれているようで、こちらでは全ユーザーLv1からスタート。Telegram版で出遅れた人も良い機会。",
+    "types": [
+      "game", "daily", "free"
+    ],
+    "links": {
+      "original_url": "https://x.com/Wizzwoods_game/status/1855906013783703749",
+      "my_referral_link": {
+        "url": "https://t.me/WizzwoodsBot/app?startapp=rp_228754",
+        "code": "rp_228754"
+      }
+    }
+  },
+  {
+    "date": "2024-11-12T22:00:00+09:00",
+    "title": "Citrea テストネット",
+    "project": "Citrea",
+    "project_url": "https://citrea.xyz/",
+    "description": "ZK RollupなビットコインL2。今は公式の指定タスクのようなものは無いけど、faucetとブリッジだけ触ってtx残しておく",
+    "types": [
+      "testnet", "free", "once"
+    ],
+    "links": {
+      "pro_tweet_link": "https://x.com/tippy_crypto/status/1854358314177736713"
+    }
+  },
+  {
     "date": "2024-11-10T03:00:00+09:00",
     "title": "Yala テストネット",
     "project": "Yala",
