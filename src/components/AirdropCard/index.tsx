@@ -31,7 +31,7 @@ export const AirdropCard = ({ item }: Props) => {
     return [
       item.links.original_url
         ? {
-            text: '公式の補足情報',
+            text: '公式リンク',
             href: item.links.original_url,
           }
         : null,
