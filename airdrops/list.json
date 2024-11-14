@@ -1,5 +1,19 @@
 [
   {
+    "date": "2024-11-15T06:00:00+09:00",
+    "title": "Espresso Infinite Garden",
+    "project": "Espresso",
+    "project_url": "https://www.espressosys.com/",
+    "description": "Espresso メインネット初のアプリケーションか？\n\"Leave your mark on Espresso Mainnet by signing with your wallet.\"と言われてるように足跡残しておきましょう(所要時間20秒)",
+    "types": [
+      "once", "free"
+    ],
+    "links": {
+      "original_url": "https://infinitegarden.espressosys.com/",
+      "pro_tweet_link": "https://x.com/kiyo_crypt/status/1856863134432334113"
+    }
+  },
+  {
     "date": "2024-11-12T22:00:00+09:00",
     "title": "Wizzwoods for X",
     "project": "Wizzwoods",
