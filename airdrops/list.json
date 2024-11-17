@@ -1,5 +1,39 @@
 [
   {
+    "date": "2024-11-17T19:00:00+09:00",
+    "title": "Grand Conquest Season3",
+    "project": "Grand Conquest",
+    "project_url": "https://game.grandconquest.com/#/",
+    "description": "beraチェーンで展開してる世界征服ストラテジーゲームのSeason3が開始。ゲーム内通貨(gold)のステーキングが1日あたり30%利益出るっぽいので、bera集めてる人もgoldに替えてステーキングだけ少し触ってみるのもアリでは。",
+    "types": [
+      "game", "free"
+    ],
+    "links": {
+      "original_url": "https://x.com/grandconquest/status/1851643878950187201"
+    }
+  },
+  {
+    "date": "2024-11-17T19:00:00+09:00",
+    "title": "Farcaster Dog",
+    "project": "Farcaster Dog",
+    "project_url": "https://farcasterdog.xyz/",
+    "description": "Farcasterの使用歴やフォロワー数に基づいてミーム貰えるシリーズ。TelegramでもMini App黎明期によくありましたね。\nFarcaster公式プロジェクトではない点と、連携時にFarcasterの強めの権限を求められる点だけ注意。",
+    "types": [
+      "once", "free"
+    ],
+    "links": {
+      "pro_tweet_link": "https://x.com/tippy_crypto/status/1856988351905370131",
+      "pro_referral_link": {
+        "url": "https://farcasterdog.xyz/referral/193488",
+        "code": "193488"
+      },
+      "my_referral_link": {
+        "url": "https://farcasterdog.xyz/referral/385707",
+        "code": "385707"
+      }
+    }
+  },
+  {
     "date": "2024-11-15T06:00:00+09:00",
     "title": "Espresso Infinite Garden",
     "project": "Espresso",
