@@ -10,8 +10,14 @@
     ],
     "links": {
       "pro_tweet_link": "https://x.com/lucianlampdefi/status/1865264049954644185",
-      "pro_referral_link": "https://t.me/blum/app?startapp=ref_aTGxiiQ47N",
-      "my_referral_link": "https://t.me/blum/app?startapp=ref_n11S2GHRkL"
+      "pro_referral_link": {
+        "url": "https://t.me/blum/app?startapp=ref_aTGxiiQ47N",
+        "code": "ref_aTGxiiQ47N"
+      },
+      "my_referral_link": {
+        "url": "https://t.me/blum/app?startapp=ref_n11S2GHRkL",
+        "code": "ref_n11S2GHRkL"
+      }
     }
   },
   {
@@ -19,12 +25,15 @@
     "title": "GRVT KYC",
     "project": "GRVT",
     "project_url": "https://grvt.io/",
-    "description": "CEX+DEXのハイブリットとの事で、仕組みは当初のハイリキに近そう。そもそも日本からアクセス出来るCEXが貴重なのでKYCだけ早めに通しておく。\nKYC通すと先着3万人に$ZKくれるっぽいよ。",
+    "description": "CEX+DEXのハイブリットとの事で、詳細は省くが仕組みは当初のハイリキに近そう。そもそも日本からアクセス出来るCEXが貴重なのでKYCだけ早めに通しておく。\nKYC通すと先着3万人に$ZKくれるっぽいよ。",
     "types": [
       "once"
     ],
     "links": {
-      "my_referral_link": "https://grvt.io/exchange/sign-up?ref=NGNNAQZ"
+      "my_referral_link": {
+        "url": "https://grvt.io/exchange/sign-up?ref=NGNNAQZ",
+        "code": "NGNNAQZ"
+      }
     }
   },
   {
