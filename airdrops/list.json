@@ -1,5 +1,33 @@
 [
   {
+    "date": "2024-12-09T11:50:00+09:00",
+    "title": "Blum",
+    "project": "Blum",
+    "project_url": "https://x.com/blumcrypto",
+    "description": "Telegram Mini Appでミームのローンチパッドやるの流行りかな？TGE近そうなのでざっくりポイント回収だけしておく。",
+    "types": [
+      "daily", "free"
+    ],
+    "links": {
+      "pro_tweet_link": "https://x.com/lucianlampdefi/status/1865264049954644185",
+      "pro_referral_link": "https://t.me/blum/app?startapp=ref_aTGxiiQ47N",
+      "my_referral_link": "https://t.me/blum/app?startapp=ref_n11S2GHRkL"
+    }
+  },
+  {
+    "date": "2024-12-09T11:50:00+09:00",
+    "title": "GRVT KYC",
+    "project": "GRVT",
+    "project_url": "https://grvt.io/",
+    "description": "CEX+DEXのハイブリットとの事で、仕組みは当初のハイリキに近そう。そもそも日本からアクセス出来るCEXが貴重なのでKYCだけ早めに通しておく。\nKYC通すと先着3万人に$ZKくれるっぽいよ。",
+    "types": [
+      "once"
+    ],
+    "links": {
+      "my_referral_link": "https://grvt.io/exchange/sign-up?ref=NGNNAQZ"
+    }
+  },
+  {
     "date": "2024-11-17T19:00:00+09:00",
     "title": "Grand Conquest Season3",
     "project": "Grand Conquest",
