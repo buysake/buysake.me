@@ -85,6 +85,7 @@ type TokenSingleLink = Tokens.Generic & {
   appleMusic?: { originalUrl: string };
   spotifyMusic?: { originalUrl: string };
   tweet?: { originalUrl: string };
+  youtube?: { originalUrl: string };
 };
 
 export const markdownToRawHtml = (json: string) => {
@@ -114,6 +115,9 @@ export const markdownToRawHtml = (json: string) => {
           if (token.spotify) {
             return makeSpotifyEmbed(token.spotify.originalUrl);
           }
+          if (token.youtube) {
+            return makeYouTubeEmbed(token.youtube.originalUrl);
+          }
           if (token.tweet) {
             return makeTweetEmbed(token.tweet.originalUrl);
           }
@@ -134,6 +138,10 @@ export const markdownToRawHtml = (json: string) => {
         token.appleMusic = detectAppleMusic(token.url);
         token.spotify = detectSpotify(token.url);
         token.tweet = detectTweet(token.url);
+        token.youtube = detectYouTube(token.url);
+        if (token.appleMusic || token.spotify || token.tweet || token.youtube) {
+          return;
+        }
         token.ogp = await fetchOGP(token.url);
       }
     },
@@ -164,7 +172,7 @@ const makeOGPHtml = (ogp: OgObject, url: string) => {
 
 const makeTweetEmbed = (url: string) => {
   return `
-    <blockquote data-theme="dark" class="twitter-tweet"><p lang="ja" dir="ltr"><a href="${url}"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"></p><a href="${url.replace(/x\.com/, 'twitter.com')}"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   `;
 };
 
@@ -185,7 +193,17 @@ const makeSpotifyEmbed = (url: string) => {
   );
 
   return `
-    <iframe style="border-radius:12px" src="${src}" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px; aspect-ratio: 16/4; min-height: 160px;" src="${src}" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  `;
+};
+
+const makeYouTubeEmbed = (url: string) => {
+  const v = new URL(url).searchParams.get('v');
+  const t = new URL(url).searchParams.get('t');
+  const query = t ? `?start=${t}` : '';
+
+  return `
+    <iframe width="100%" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/${v}${query}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   `;
 };
 
@@ -251,8 +269,19 @@ const detectAppleMusic = (url: string) => {
 };
 
 const detectSpotify = (url: string) => {
-  const match = url.match(/open\.spotify\.com\/track\/[^\/].*\?/);
+  const match = url.match(/open\.spotify\.com\/track\/[A-Za-z0-9]{1,}/);
 
+  if (match) {
+    return {
+      originalUrl: url,
+    };
+  }
+
+  return undefined;
+};
+
+const detectYouTube = (url: string) => {
+  const match = url.match(/youtube\.com\/watch\?v=/);
   if (match) {
     return {
       originalUrl: url,
