@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-02-13T22:30:00+09:00",
+    "title": "Boundless berry NFT(48h限定)",
+    "project": "Boundless",
+    "project_url": "https://x.com/boundless_xyz",
+    "description": "こういうフリーミントのNFTは恵まれる気はしないけど、TLの強いハンターがこぞってやっていたので一応。Boundlessは全てのチェーンにゼロ知識証明を提供するための\"universal ZK protocol\"",
+    "types": [
+      "once"
+    ],
+    "links": {
+      "original_url": "https://x.com/boundless_xyz/status/1889720963870146640"
+    }
+  },
+  {
     "date": "2025-01-01T14:00:00+09:00",
     "title": "Humanity Protocol",
     "project": "Humanity Protocol",
