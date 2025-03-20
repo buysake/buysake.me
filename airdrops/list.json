@@ -1,5 +1,22 @@
 [
   {
+    "date": "2025-03-21T04:30:00+09:00",
+    "title": "THE STORK VERIFIER NETWORK",
+    "project": "Stork",
+    "project_url": "https://www.stork.network/",
+    "description": "storkの軽量検証ノードみたいな拡張機能っぽいね。最近この手の軽い検証処理に対するリソース貸しをchrome拡張でやるところ増えてるね。最後にスイッチONにするのお忘れなく。\nコード: XE92UWRHW2",
+    "types": [
+      "once", "free"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://chrome.google.com/webstore/detail/stork/knnliglhgkmlblppdejchidfihjnockl",
+        "code": "XE92UWRHW2"
+      }
+    }
+
+  },
+  {
     "date": "2025-02-13T22:30:00+09:00",
     "title": "Boundless berry NFT(48h限定)",
     "project": "Boundless",
