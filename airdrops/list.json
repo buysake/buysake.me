@@ -1,5 +1,34 @@
 [
   {
+    "date": "2025-03-26T12:30:00+09:00",
+    "title": "Madness (Monad testnet)",
+    "project": "Madness",
+    "project_url": "https://madness.finance",
+    "description": "Monadテストネットで展開されてるDEX。ポイントシステムある一方で意外とあんまり人いないし、Monadのお触りはここだけは頻繁に触っている。たまにexpページが重いことを除けば普通に使いやすい。",
+    "types": [
+      "free"
+    ],
+    "links": {
+      "my_referral_link": {
+        "url": "https://madness.finance/exp?ref=4FPY2L",
+        "code": "4FPY2L"
+      }
+    }
+  },
+  {
+    "date": "2025-03-26T12:30:00+09:00",
+    "title": "superboard: MegaETH",
+    "project": "MegaETH",
+    "project_url": "https://www.megaeth.com/",
+    "description": "superboardにMegaETHが来た。MegaETHのテストネット自体はノーインセンティブ宣言されてるし、こういう機会に軽くtx刻む程度の活動を定期的にまったり続けていけば良さそう。",
+    "types": [
+      "once", "free"
+    ],
+    "links": {
+      "original_url": "https://superboard.xyz/campaign/megaeth-testnet-real-time-era"
+    }
+  },
+  {
     "date": "2025-03-21T04:30:00+09:00",
     "title": "THE STORK VERIFIER NETWORK",
     "project": "Stork",
