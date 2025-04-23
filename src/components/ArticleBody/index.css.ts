@@ -50,6 +50,10 @@ globalStyle(`${bodyContentStyle} img`, {
   width: '100%',
 });
 
+globalStyle(`${bodyContentStyle} video`, {
+  width: '100%',
+});
+
 globalStyle(`${bodyContentStyle} code`, {
   background: 'rgba(255, 255, 255, 0.1)',
   padding: '0.2em 0.4em',
