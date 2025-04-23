@@ -9,7 +9,7 @@ export const generateStaticParams = () => {
 export const generateMetadata = async ({ params }: Props) => {
   const article = await getArticle(params.slug);
 
-  const url = `https://buysake.me/article/${params.slug}`;
+  const url = `https://buysake.me/articles/${params.slug}`;
 
   const siteName = 'buysake.me';
 
